@@ -20,18 +20,23 @@ function markDone(id) {
   window.location.reload();
 }
 
-function deleteTodo(id){
-    let confirm = window.confirm("Are You sure you want to delete?");
-    if(!confirm) return 
-    todos.splice(id.1);
-    saver(todos)
-    window.location.reload()
+function deleteTodo(id) {
+  let confirm = window.confirm("Are You sure you want to delete?");
+  if (!confirm) return;
+  todos.splice(id, 1);
+  saver(todos);
+  window.location.reload();
 }
 
-document.getElementById('content').innerHTML = todos.map((item,i)=>(
+document.getElementById("content").innerHTML = todos.map(
+  (item, i) =>
     `<div class="todo">
-    <div class="inp over" ${item.done === true && 'line'}">${item.todo}</div>
-    <button onclick="markDone(${i})" class="done-btn">${item.done === false ? '<i class="fa-solid fa-check"></i>' : '<i class="fa-solid fa-rotate-right"></i>'} </button>
+    <div class="inp over" ${item.done === true && "line"}">${item.todo}</div>
+    <button onclick="markDone(${i})" class="done-btn">${
+      item.done === false
+        ? '<i class="fa-solid fa-check"></i>'
+        : '<i class="fa-solid fa-rotate-right"></i>'
+    } </button>
     <button onclick="deleteTodo(${i})" class="delete-btn"><i class="fa-solid fa-trash"></i></button>
-    </div>'
-))
+    </div>`
+);
