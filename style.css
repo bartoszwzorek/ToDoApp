@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+body {
+  background: linear-gradient(to right, #b06ab3, #4568dc);
+}
+
+.main {
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.input-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
