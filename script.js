@@ -1,7 +1,7 @@
-let todos = JSON.parse(localStorage.getItem("myTodos"));
+let todos = json.parse(localStorage.getItem("myTodos"));
 
 function saver(todosArray) {
-  localStorage.setItem("myTodos", JSON.stringify(todosArray));
+  localStorage.setItem("myTodos", json.stringify(todosArray));
 }
 
 function addTOdo() {
